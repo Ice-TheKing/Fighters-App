@@ -68,11 +68,6 @@ const sendPost = (e, nameForm) => {
   const armorField = nameForm.querySelector('#armorField');
   const critField = nameForm.querySelector('#critField');
   
-  if(fighterNameField.value.length < 1 || playerNameField.value.length < 1) {
-    
-    return;
-  }
-  
   const xhr = new XMLHttpRequest();
   xhr.open(nameMethod, nameAction);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');

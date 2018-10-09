@@ -70,11 +70,6 @@ var sendPost = function sendPost(e, nameForm) {
   var armorField = nameForm.querySelector('#armorField');
   var critField = nameForm.querySelector('#critField');
 
-  if (fighterNameField.value.length < 1 || playerNameField.value.length < 1) {
-
-    return;
-  }
-
   var xhr = new XMLHttpRequest();
   xhr.open(nameMethod, nameAction);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
