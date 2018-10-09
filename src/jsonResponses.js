@@ -65,7 +65,7 @@ const getFightersMeta = (request, response) => {
 const addFighter = (request, response, body) => {
   // Fighter Name, Player Name, Health, Damage, Speed, Armor, Crit Chance
   const responseJSON = {
-    message: 'Name and age required',
+    message: 'All parameters are required',
   };
 
   // validate
