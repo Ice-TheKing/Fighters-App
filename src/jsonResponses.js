@@ -83,8 +83,8 @@ const addFighter = (request, response, body) => {
   }
 
   // validate the values are between 1 and 15
-  if (body.secure === true // if we pass a value called secure, then we can bypass the limits
-      && (body.health < 1
+  if (!body.secure // if we pass a value called secure, then we can bypass the limits
+      && body.health < 1
       || body.health > 15
       || body.damage < 1
       || body.damage > 15
@@ -93,7 +93,7 @@ const addFighter = (request, response, body) => {
       || body.armor < 1
       || body.armor > 15
       || body.crit < 1
-      || body.crit > 15)
+      || body.crit > 15
   ) {
     responseJSON.id = 'incorrectValues';
     responseJSON.message = 'Values should be between 1 and 15';
@@ -101,15 +101,15 @@ const addFighter = (request, response, body) => {
   }
 
   // validate total value does not exceed 36
-  if (body.secure === true // if we pass a value called secure, then we can bypass the limits
-     && Number(body.health)
+  if (!body.secure // if we pass a value called secure, then we can bypass the limits
+     && (Number(body.health)
      + Number(body.damage)
      + Number(body.speed)
      + Number(body.armor)
-     + Number(body.crit) > 36
+     + Number(body.crit) > 36)
   ) {
     responseJSON.id = 'pointsExceeded';
-    responseJSON.message = 'Points used exceed 36';
+    responseJSON.message = 'Point values exceed 36';
     return respondJSON(request, response, 400, responseJSON);
   }
 

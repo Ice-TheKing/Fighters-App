@@ -123,10 +123,14 @@ input {
   margin:auto;
   width:auto;
   padding: 0;
+  
 }
 
-label {
-  
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
 }
 
 #log {
@@ -136,12 +140,12 @@ label {
   top:50px;
   height:90%;
   width:28%;
-  border:1px solid #ccc;
+  border:1px solid #000;
   overflow:auto;
   padding-left: 20px;
   
   // background: rgba(171, 127, 143, .85);
-  background: rgba(216, 187, 219, .85);
+  background: #BF98A1D9;
 }
 
 #main {
@@ -152,7 +156,7 @@ label {
   height:90%;
   width: 60%;
   overflow:auto;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   
   background: rgba(240, 240, 240, .85);
 }
