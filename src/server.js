@@ -83,6 +83,8 @@ const handleGet = (request, response, parsedUrl) => {
     htmlHandler.getIndex(request, response);
   } else if (parsedUrl.pathname === '/bundle.js') {
     htmlHandler.getBundle(request, response);
+  } else if (parsedUrl.pathname === '/favicon.ico') {
+    htmlHandler.getIcon(request, response);
   } else {
     jsonHandler.notFound(request, response);
   }
