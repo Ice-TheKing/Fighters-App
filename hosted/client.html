@@ -12,11 +12,11 @@
   <section id="top">
     <h3>Create a New Fighter</h3>
     <h4>All stats should be between 1 and 15</h4>
-    <form id="nameForm" action="/addFighter" method="post">
+    <form id="nameForm" action="/addFighter" method="post" autocomplete="off">
       <label for="fname">Fighter Name: </label>
-      <input id="fighterNameField" type="text" name="fname" placeholder="Fighter Name"/>
+      <input id="fighterNameField" type="text" name="fname" placeholder="Fighter Name" autocomplete="off"/>
       <label for="pname">Player Name: </label>
-      <input id="playerNameField" type="text" name="pname" placeholder="Your Name"/><br><br>
+      <input id="playerNameField" type="text" name="pname" placeholder="Your Name" autocomplete="off"/><br><br>
       <label for="hlth">Health: </label>
       <input id="healthField" type="number" name="hlth" min="1" max="15" step="1" value="1"/>
       <label for="dmg">Damage: </label>
