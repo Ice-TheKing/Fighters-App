@@ -59,7 +59,11 @@ form {
   border: 1px solid black;
   display:inline-block;
   
-  background: rgba(134, 165, 188, 1);
+  background: #86A5BC;
+}
+
+.cardBox:hover {
+  background: #7EAEC9;
 }
 
 .battleSlot {
@@ -104,6 +108,27 @@ ul {
   background: rgba(191, 61, 92, 1);
 }
 
+.active:hover {
+  background: #D62A50;
+}
+
+#nameForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+input {
+  margin:auto;
+  width:auto;
+  padding: 0;
+}
+
+label {
+  
+}
+
 #log {
   position:absolute;
   float:right;
@@ -141,3 +166,31 @@ ul {
   text-align: center;
   margin: 0 0 38px 0;
 }
+
+/* button code from https://www.bestcssbuttongenerator.com/ */
+
+.button {
+  background-color:#bf3d5b;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  // border:1px solid #000000;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:11px;
+  font-weight:bold;
+  padding:7px 30px;
+  text-decoration:none;
+}
+
+.button:hover {
+  background-color:#D62A50;
+}
+
+.button:active {
+  position:relative;
+  top:1px;
+}
+

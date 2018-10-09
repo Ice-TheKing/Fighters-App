@@ -51,8 +51,8 @@ const addLog = (request, response, body) => {
   }
 
   // if the log is too long, delete the oldest messages
-  if (battleLog.log.length > 200) {
-    battleLog.splice(0, 10); // just dump the first 10 messages
+  if (battleLog.log.length > 500) {
+    battleLog.splice(0, 100); // just dump the first 100 messages
   }
 
   return respondJSONMeta(request, response, responseCode);
