@@ -68,6 +68,11 @@ const sendPost = (e, nameForm) => {
   const armorField = nameForm.querySelector('#armorField');
   const critField = nameForm.querySelector('#critField');
   
+  if(fighterNameField.value.length < 1 || playerNameField.value.length < 1) {
+    
+    return;
+  }
+  
   const xhr = new XMLHttpRequest();
   xhr.open(nameMethod, nameAction);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -146,27 +151,6 @@ const removeFighter = (fighter) => {
   
   xhr.send(formData);
   return false;
-};
-
-const xhrRequestFighters = () => {
-  // for getting back the JSON object with the fighters and return it
-  const xhr = new XMLHttpRequest();
-  xhr.open('get', '/getFighters');
-  let fighters = {};
-  
-  xhr.onload = () => {
-    switch(xhr.status) {
-        case 200:
-          if(xhr.response) {
-            fighters = (JSON.parse(xhr.response)).fighters;
-            return fighters;
-          }
-          break;
-      }
-  };
-  xhr.send();
-  
-  // return fighters;
 };
 
 const getFighters = (e) => {
@@ -328,6 +312,7 @@ const fight = (death) => {
     getFighters();
   };
   xhr.send();
+  return false;
 };
 
 const runBattle = (fighters, death) => {
@@ -561,6 +546,7 @@ const updateLog = () => {
     }
   };
   xhr.send();
+  return false;
 };
 
 const logItem = (text, logForm) => {

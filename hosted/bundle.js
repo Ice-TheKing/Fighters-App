@@ -70,6 +70,11 @@ var sendPost = function sendPost(e, nameForm) {
   var armorField = nameForm.querySelector('#armorField');
   var critField = nameForm.querySelector('#critField');
 
+  if (fighterNameField.value.length < 1 || playerNameField.value.length < 1) {
+
+    return;
+  }
+
   var xhr = new XMLHttpRequest();
   xhr.open(nameMethod, nameAction);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -152,27 +157,6 @@ var removeFighter = function removeFighter(fighter) {
 
   xhr.send(formData);
   return false;
-};
-
-var xhrRequestFighters = function xhrRequestFighters() {
-  // for getting back the JSON object with the fighters and return it
-  var xhr = new XMLHttpRequest();
-  xhr.open('get', '/getFighters');
-  var fighters = {};
-
-  xhr.onload = function () {
-    switch (xhr.status) {
-      case 200:
-        if (xhr.response) {
-          fighters = JSON.parse(xhr.response).fighters;
-          return fighters;
-        }
-        break;
-    }
-  };
-  xhr.send();
-
-  // return fighters;
 };
 
 var getFighters = function getFighters(e) {
@@ -331,6 +315,7 @@ var fight = function fight(death) {
     getFighters();
   };
   xhr.send();
+  return false;
 };
 
 var runBattle = function runBattle(fighters, death) {
@@ -563,6 +548,7 @@ var updateLog = function updateLog() {
     }
   };
   xhr.send();
+  return false;
 };
 
 var logItem = function logItem(text, logForm) {

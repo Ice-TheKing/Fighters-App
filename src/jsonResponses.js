@@ -79,7 +79,7 @@ const addFighter = (request, response, body) => {
     || !body.crit
   ) {
     responseJSON.id = 'missingParams';
-    // return respondJSON(request, response, 400, responseJSON);
+    return respondJSON(request, response, 400, responseJSON);
   }
 
   // validate the values are between 1 and 15
