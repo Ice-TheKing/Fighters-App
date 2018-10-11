@@ -64,7 +64,7 @@ form {
 
 .cardBox:hover {
   background: #7EAEC9;
-  transform: scale(1.08);
+  transform: scale(1.05);
   z-index: 1;
   
   box-shadow: 0 0 48px #B9E2FC;

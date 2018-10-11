@@ -41,5 +41,5 @@ module.exports = {
   getCSS,
   getBundle,
   getBackground,
-  getIcon
+  getIcon,
 };
