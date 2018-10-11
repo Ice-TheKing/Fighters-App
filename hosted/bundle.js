@@ -368,7 +368,7 @@ var calculateWinner = function calculateWinner(fighter1, fighter2) {
   /* COMBAT ORDER
   1: speed + d6 vs speed + d6 winner goes first in round
   2: check crit on a percentile
-  3: damage + d6, armor + d6
+  3: damage + d6, armor
   4: if(crit) damage = parseint(damage*=1.5);
   5: target.health -= Math.max(0,(damage - armor));
   6: repeat 1-5 for lower speed roll

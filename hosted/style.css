@@ -64,6 +64,15 @@ form {
 
 .cardBox:hover {
   background: #7EAEC9;
+  transform: scale(1.08);
+  z-index: 1;
+  
+  box-shadow: 0 0 48px #B9E2FC;
+}
+
+.cardBox:active {
+  left:1px;
+  top:2px;
 }
 
 .battleSlot {
@@ -110,6 +119,7 @@ ul {
 
 .active:hover {
   background: #D62A50;
+  box-shadow: 0 0 48px #F0647F;
 }
 
 #nameForm {
@@ -190,7 +200,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .button:hover {
-  background-color:#D62A50;
+  background:#D62A50;
+  box-shadow: 0 0 8px #F0B4BD;
+  transform: scale(1.05);
 }
 
 .button:active {
